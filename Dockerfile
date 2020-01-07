@@ -40,3 +40,6 @@ RUN python --version && python2 --version && go version && node --version && doc
 
 # clean
 RUN rm -rf /tmp/*
+
+# to mount ssh key
+RUN mkdir /home/coder/.ssh
