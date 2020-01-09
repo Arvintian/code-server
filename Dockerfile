@@ -50,4 +50,4 @@ RUN sudo apt-get install -y openssh-server
 # entrypoint
 COPY entrypoint.py /entrypoint/
 COPY .bashrc /home/coder/
-ENTRYPOINT ["python", "/entrypoint/entrypoint.py"]
+ENTRYPOINT ["dumb-init","python", "/entrypoint/entrypoint.py"]

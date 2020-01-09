@@ -6,12 +6,12 @@ import os
 
 def start_ssh():
     cmd = ["sudo", "service", "ssh", "start"]
-    return subprocess.Popen(cmd)
+    return subprocess.run(cmd)
 
 
 def stop_ssh():
     cmd = ["sudo", "service", "ssh", "stop"]
-    return subprocess.Popen(cmd)
+    return subprocess.run(cmd)
 
 
 def start_code_server():
