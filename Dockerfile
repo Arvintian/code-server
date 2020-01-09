@@ -43,3 +43,10 @@ RUN rm -rf /tmp/*
 
 # to mount ssh key
 RUN mkdir /home/coder/.ssh
+
+# install ssh-server
+RUN sudo apt-get install -y openssh-server
+
+# entrypoint
+COPY entrypoint.py /entrypoint/
+ENTRYPOINT ["python", "/entrypoint/entrypoint.py"]
